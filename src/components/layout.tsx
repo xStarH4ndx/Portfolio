@@ -1,51 +1,34 @@
-import React from 'react'
-import { Box, Typography, Paper, useTheme, Container } from '@mui/material'
-import Navbar from './common/Navbar'
-import SideBar from './common/SideBar'
+import React from 'react';
+import { Box } from '@mui/material';
+import SideBar from './common/SideBar';
+import foto from '../assets/sinfondoplaya.png'
 
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const Layout: React.FC<Props> = ({children}) => {
-  const theme = useTheme()
-
+const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <Box sx={{ height: '100vh', display: 'grid', gridTemplateRows: 'auto 1fr auto', overflow: 'hidden' }}>
-      {/* Navbar */}
-      <Navbar />
+    <Box sx={{ display: 'flex' }}>
+      {/* Sidebar fijo */}
+      <SideBar />
 
-      {/* Contenido Principal con sidebars */}
+      {/* Contenido scrollable */}
       <Box
+        component="main"
         sx={{
-          display: 'grid',
-          gridTemplateColumns: { xs: '1fr', md: '300px 1fr', marginTop: 60},
           flexGrow: 1,
-          overflow: 'auto',
+          ml: { md: '250px' }, // ancho igual al sidebar
+          height: 'auto',
+          overflowY: 'auto',
+          p: 4,
         }}
       >
-        <SideBar/>
-
-        {/* Main Content */}
-        <Container sx={{ flexGrow: 1, p: 2, overflow: 'auto' }}>
-          {children}
-        </Container>
+        {children}
       </Box>
-
-      {/* Footer */}
-      <Box
-        sx={{
-          backgroundColor: '#385F71',
-          color: 'white',
-          textAlign: 'center',
-          p: 2,
-        }}
-      >
-        <Typography variant="body2">&copy; 2025 ARQ-TEAM</Typography>
-        <Typography variant="body2">All rights reserved</Typography>
-      </Box>
+      
     </Box>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

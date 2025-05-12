@@ -10,7 +10,7 @@ const darkTheme = createTheme({
       main: '#f48fb1', // Rosa claro
     },
     background: {
-      default: '#CED4DA',
+      default: '#100f19',
       paper: '#1e1e1e'
     },
   },
