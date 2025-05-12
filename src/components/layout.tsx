@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import SideBar from './common/SideBar';
-import foto from '../assets/sinfondoplaya.png'
 
 interface Props {
   children: React.ReactNode;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Divider, Typography } from '@mui/material';
+import { Box, Button, Divider } from '@mui/material';
 import perfil from '../../assets/perfil.jpg';
 import foto from '../../assets/sinfondoplaya.png';
 
