@@ -6,10 +6,14 @@ import Habilidades from './sections/Habilidades';
 import Contacto from './sections/Contacto';
 import Educacion from './sections/Educacion';
 import { Box } from '@mui/material';
+import Header from './sections/Header';
 
 const App: React.FC = () => {
   return (
     <Layout>
+      <Box id="header" sx={{ minHeight: '100vh', py: 6 }}>
+        <Header />
+      </Box>
       <Box id="sobre-mi" sx={{ minHeight: '100vh', py: 6 }}>
         <Informacion />
       </Box>

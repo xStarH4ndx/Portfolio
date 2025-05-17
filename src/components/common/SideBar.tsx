@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Box, Button, Divider } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Box, Button } from '@mui/material';
 import perfil from '../../assets/perfil.jpg';
 import foto from '../../assets/sinfondoplaya.png';
 
 const sections = [
+  { id: 'header', label: 'BRUNO TORO' },
   { id: 'sobre-mi', label: 'SOBRE MI' },
   { id: 'proyectos', label: 'PROYECTOS' },
   { id: 'educacion', label: 'EDUCACIÓN' },
@@ -12,7 +13,7 @@ const sections = [
 ];
 
 const SideBar: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<string>('');
+  const [activeSection, setActiveSection] = useState<string>('header');
 
   const handleScroll = (id: string) => {
     const section = document.getElementById(id);
@@ -22,21 +23,26 @@ const SideBar: React.FC = () => {
     }
   };
 
-  // Detecta cuál es la sección visible en el viewport
   const handleScrollChange = () => {
+    let found = false;
     sections.forEach(({ id }) => {
       const section = document.getElementById(id);
-      if (section) {
+      if (section && !found) {
         const rect = section.getBoundingClientRect();
         if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
           setActiveSection(id);
+          found = true;
         }
       }
     });
+
+    // Marca "header" como activo si el usuario está muy arriba
+    if (window.scrollY < 100) {
+      setActiveSection('header');
+    }
   };
 
-  // Escucha el evento de scroll
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', handleScrollChange);
     return () => {
       window.removeEventListener('scroll', handleScrollChange);
@@ -65,27 +71,8 @@ const SideBar: React.FC = () => {
         component="img"
         src={perfil}
         alt="Avatar"
-        sx={{ width: 200, height: 200, mt: 20, mb: 2, borderRadius: '50%' }}
+        sx={{ width: 200, height: 200, mt: 20, mb: 4, borderRadius: '50%' }}
       />
-
-      {/* Nombre como botón seleccionable */}
-      <Button
-        id="header"
-        variant="text"
-        color="inherit"
-        fullWidth
-        onClick={() => handleScroll('header')}
-        sx={{
-          fontSize: '1.2rem',
-          color: activeSection === 'header' ? '#40E0D0' : 'white', // Cambia el color cuando "header" está activo
-          mb: 1,
-          textAlign: 'center',
-        }}
-      >
-        BRUNO TORO
-      </Button>
-
-      <Divider sx={{ width: '100%', mb: 2 }} />
 
       {/* Botones del menú */}
       {sections.map(({ id, label }) => (
@@ -96,14 +83,15 @@ const SideBar: React.FC = () => {
           fullWidth
           onClick={() => handleScroll(id)}
           sx={{
-            color: activeSection === id ? '#40E0D0' : 'white', // Cambia el color cuando la sección está activa
+            color: activeSection === id ? '#40E0D0' : 'white', // Activa el color turquesa
             mb: 1,
           }}
         >
           {label}
         </Button>
       ))}
-      {/* IMAGEN */}
+
+      {/* Imagen decorativa */}
       <Box
         component="img"
         src={foto}
