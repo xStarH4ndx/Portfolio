@@ -1,50 +1,42 @@
-import React from 'react';
+// Header.tsx
+import React from "react";
+import StarsBackground from "../components/StarsBackground";
+import HeaderContent from "../components/HeaderContent";
 
 const Header: React.FC = () => {
   return (
-    <div
-      id="header"
-      style={{
-        padding: '60px 20px',
-        marginTop: '100px',
-        background: 'linear-gradient(135deg, #7F00FF, #E100FF)',
-        color: 'white',
-        textAlign: 'center',
-        borderRadius: '0 0 30px 30px',
-        boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.2)',
-      }}
-    >
-      <h1 style={{ fontSize: '3rem', marginBottom: '20px' }}>
-        ¡Hola, soy <span style={{ color: '#40E0D0' }}>Bruno Toro</span>!
-      </h1>
-      <p style={{ fontSize: '1.2rem', marginBottom: '10px' }}>
-        Soy un <strong>desarrollador web</strong> apasionado por crear aplicaciones modernas y eficientes.
-      </p>
-      <p style={{ fontSize: '1.2rem', marginBottom: '30px' }}>
-        Aquí encontrarás algunos de mis <strong>proyectos</strong> y <strong>habilidades</strong>.
-      </p>
-      <p style={{ fontSize: '1.2rem', fontStyle: 'italic' }}>¡Bienvenido a mi portafolio!</p>
+    <header className="header-wrapper">
+      <StarsBackground />
+      <HeaderContent />
 
-      <a
-        href="./CV_Bruno_Toro.pdf"
-        style={{
-          display: 'inline-block',
-          marginTop: '30px',
-          padding: '12px 25px',
-          backgroundColor: '#40E0D0',
-          color: '#382860',
-          fontWeight: 'bold',
-          border: 'none',
-          borderRadius: '30px',
-          textDecoration: 'none',
-          transition: 'background-color 0.3s ease, transform 0.2s ease',
-        }}
-        onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#3ccaca')}
-        onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#40E0D0')}
-      >
-        Descargar mi CV
-      </a>
-    </div>
+      <style>{`
+      .header-wrapper {
+        position: relative;
+        overflow: hidden;
+      }
+      .stars-background {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 600%; /* Aumentamos tamaño para cubrir toda la rotación */
+        background-image:
+          radial-gradient(white 1.2px, transparent 1.2px),
+          radial-gradient(white 0.9px, transparent 0.9px);
+        background-size: 200px 200px, 100px 100px;
+        background-position: 0 0, 50px 50px;
+        opacity: 0.3;
+        z-index: 0;
+        animation: rotateStars 120s linear infinite;
+        transform-origin: center center;
+      }
+
+      @keyframes rotateStars {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    `}</style>
+    </header>
   );
 };
 

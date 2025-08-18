@@ -57,7 +57,7 @@ const SideBar: React.FC = () => {
         position: 'fixed',
         top: 0,
         left: 0,
-        bgcolor: '#2C204A',
+        bgcolor: '#1D1C1D',
         color: 'white',
         p: 3,
         display: { xs: 'none', md: 'flex' },
@@ -90,14 +90,6 @@ const SideBar: React.FC = () => {
           {label}
         </Button>
       ))}
-
-      {/* Imagen decorativa */}
-      <Box
-        component="img"
-        src={foto}
-        alt="Imagen de fondo"
-        sx={{ width: 250, height: 400, mt: 0, mb: -8 }}
-      />
     </Box>
   );
 };

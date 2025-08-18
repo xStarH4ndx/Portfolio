@@ -20,12 +20,10 @@ const Layout: React.FC<Props> = ({ children }) => {
           ml: { md: '250px' }, // ancho igual al sidebar
           height: 'auto',
           overflowY: 'auto',
-          p: 4,
         }}
       >
         {children}
       </Box>
-      
     </Box>
   );
 };
