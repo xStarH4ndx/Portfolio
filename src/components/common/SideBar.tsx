@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Button } from '@mui/material';
 import perfil from '../../assets/perfil.jpg';
-import foto from '../../assets/sinfondoplaya.png';
 
 const sections = [
   { id: 'header', label: 'BRUNO TORO' },

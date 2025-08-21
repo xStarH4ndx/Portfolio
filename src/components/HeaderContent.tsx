@@ -65,7 +65,7 @@ const HeaderContent: React.FC = () => {
         .name {
           font-size: clamp(2.5rem, 6vw, 5rem);
           font-weight: 900;
-          margin: 0 0 20px 0;
+          margin: 0 0 -15px 0;
           line-height: 1.1;
         }
 
@@ -75,6 +75,7 @@ const HeaderContent: React.FC = () => {
 
         .info {
           max-width: 650px;
+          margin: 0 0 -15px 0;
         }
 
         .degree {
