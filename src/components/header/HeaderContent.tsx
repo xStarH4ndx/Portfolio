@@ -31,7 +31,7 @@ const HeaderContent: React.FC = () => {
         </a>
         <a
           className="social-btn"
-          href="https://www.linkedin.com/in/bruno-toro-elgueta-768629264/"
+          href="https://www.linkedin.com/in/bruno-toro-elgueta/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Perfil de LinkedIn de Bruno Toro Elgueta"
