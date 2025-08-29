@@ -15,10 +15,10 @@ const App: React.FC = () => {
       <Box id="header" sx={{ py: 6 }}>
         <Header />
       </Box>
-      <Box id="sobre-mi" sx={{ py: 6 }}>
+      <Box id="sobre-mi">
         <SobreMi />
       </Box>
-      <Box id="proyectos" sx={{ minHeight: '100vh', py: 6 }}>
+      <Box id="proyectos">
         <Proyectos />
       </Box>
       <Box id="educacion" sx={{ minHeight: '100vh', py: 6 }}>

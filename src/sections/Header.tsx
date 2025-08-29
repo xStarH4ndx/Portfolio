@@ -13,7 +13,7 @@ const Header: React.FC = () => {
           position: relative;
           overflow: hidden;
           width: 100%;
-          height: 80vh; /* ocupa la altura de la pantalla */
+          height: 70vh; /* ocupa la altura de la pantalla */
         }
 
         .stars-background {

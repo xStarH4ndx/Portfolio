@@ -13,8 +13,10 @@ const SobreMi: React.FC = () => {
       justifyContent="center"
       sx={{
         maxWidth: "1070px",   // límite de ancho
-        margin: "0 auto",    // lo centra en la página
-        padding: 2,
+        marginTop: "-20px",    // lo centra en la página,
+        marginLeft: "auto",
+        marginRight: "auto",
+        
       }}
     >
       {/* Columna Izquierda */}
