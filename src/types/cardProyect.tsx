@@ -1,5 +1,3 @@
-import React from "react"
-
 
 const listaProyectos= [
     {
@@ -32,4 +30,3 @@ interface Proyect {
 export { listaProyectos };
 export type { Proyect };
 
-    
