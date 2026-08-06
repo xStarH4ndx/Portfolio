@@ -1,17 +1,10 @@
-// src/main.tsx
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import App from './App'
-import { ThemeProvider } from '@mui/material/styles'
-import darkTheme from './theme'
-import CssBaseline from '@mui/material/CssBaseline'
-import '@fontsource-variable/roboto'
+import './styles.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline /> {/* Esto aplica el fondo y estilos base del tema */}
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
 )
