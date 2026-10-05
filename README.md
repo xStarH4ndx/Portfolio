@@ -1,67 +1,161 @@
-# Portafolio profesional — Bruno Toro
+# Bruno Toro — Portafolio Profesional
 
-Portafolio personal construido con **React + TypeScript + Vite + Tailwind CSS + componentes estilo shadcn/ui**.
+> Ingeniero Civil en Computación e Informática | Full Stack Developer | Inteligencia Artificial
 
-## Estructura actual
+Portafolio profesional de **Bruno Toro Elgueta**, Ingeniero Civil en Computación e Informática, orientado al desarrollo de soluciones tecnológicas, aplicaciones web, integración de Inteligencia Artificial y construcción de APIs.
 
-- **Inicio (`#/`)**
-  - Hero con CV, LinkedIn y GitHub.
-  - Foto integrada al fondo mediante degradados y máscara de borde.
-  - Sobre mí y habilidades blandas.
-  - Voluntariado / Proyecto Python UCN.
-  - Última experiencia laboral.
-  - Un proyecto destacado.
-  - Tecnologías.
-  - Educación y certificación de liderazgo.
-- **Servicios (`#/servicios`)**
-  - Desarrollo de aplicaciones.
-  - Portafolios personalizados.
-  - Clases particulares de programación.
-  - Ejemplos: Lunara Matrona y Last Whisper Official.
-- **Experiencia & Proyectos (`#/experiencia-proyectos`)**
-  - Toda la experiencia laboral.
-  - Todos los proyectos destacados con visualización de PDF.
+Este sitio reúne mi experiencia profesional, proyectos, tecnologías, servicios y formación, funcionando como una carta de presentación de mi perfil y trabajo.
 
-## Ejecutar localmente
+## 🌐 Portafolio
 
-```bash
-npm install
-npm run dev
-```
+**[Visitar portafolio](https://xstarh4ndx.github.io/)**
 
-## Build
+## 👨‍💻 Sobre mí
 
-```bash
-npm run build
-npm run preview
-```
+Soy Ingeniero Civil en Computación e Informática con experiencia en desarrollo **full stack**, integración de **modelos de lenguaje (LLMs)** y construcción de **APIs escalables**.
 
-## Deploy en GitHub Pages
+Me interesa desarrollar soluciones que combinen tecnología, automatización e Inteligencia Artificial para resolver problemas reales.
 
-El repositorio incluye `.github/workflows/deploy.yml` y utiliza **Node 24**.
+Además del desarrollo de software, valoro especialmente la **comunicación, el liderazgo, el trabajo en equipo, la resolución de problemas y el aprendizaje continuo**.
 
-1. Sube el proyecto a la rama `main`.
-2. En GitHub entra a **Settings → Pages**.
-3. En **Source**, selecciona **GitHub Actions**.
-4. Cada `push` a `main` construirá y publicará el sitio automáticamente.
+## 🚀 ¿Qué encontrarás en este portafolio?
 
-El proyecto usa `HashRouter` y `base: "./"`, por lo que funciona en GitHub Pages incluso si el repositorio tiene un nombre distinto al dominio.
+### 💼 Experiencia profesional
 
-## Contenido editable
+Experiencia en desarrollo de software y construcción de soluciones tecnológicas, incluyendo trabajo con:
 
-La mayor parte del contenido está centralizado en:
+- Desarrollo Full Stack
+- APIs REST
+- Inteligencia Artificial
+- Integración de LLMs
+- Bases de datos
+- Arquitecturas escalables
+- Automatización de procesos
+- Cloud
+
+### 📂 Proyectos destacados
+
+El portafolio presenta proyectos desarrollados en distintos contextos, incluyendo:
+
+- **RadarOp** — Plataforma para la evaluación y gestión de oportunidades de financiamiento, incorporando Inteligencia Artificial y búsqueda semántica.
+- **API de Inteligencia Regulatoria** — Solución para análisis de normativas, identificación de brechas y generación de controles utilizando IA.
+- **Sistema de Gestión de Gastos** — Plataforma para administrar gastos, inventario y finanzas dentro de un hogar compartido.
+- **Sistema de Inventario para Laboratorios** — Plataforma orientada a la gestión y control de inventario.
+- **Inventario Papasnata** — Solución desarrollada utilizando Microsoft Power Platform.
+
+Los proyectos incluyen información técnica y, cuando corresponde, documentación en PDF.
+
+### 🛠️ Servicios
+
+También utilizo este espacio para presentar servicios de desarrollo que puedo realizar de manera independiente:
+
+- **Desarrollo de aplicaciones**
+- **Portafolios y sitios web personalizados**
+- **Clases particulares de programación**
+
+Algunos ejemplos de trabajos y proyectos personales incluyen:
+
+- **Lunara Matrona**
+- **Last Whisper Official**
+
+## 🧰 Tecnologías
+
+### Lenguajes
+
+- C#
+- Java
+- TypeScript
+- JavaScript
+- Python
+- SQL
+
+### Frontend
+
+- React
+- Vite
+- HTML
+- CSS
+- Tailwind CSS
+- Material UI
+
+### Backend
+
+- .NET / ASP.NET Core
+- Node.js
+- NestJS
+- Spring Boot
+- REST
+- GraphQL
+- gRPC
+
+### Bases de datos
+
+- PostgreSQL
+- MongoDB
+- SQL
+
+### Inteligencia Artificial
+
+- LLMs
+- RAG
+- Embeddings
+- Búsqueda semántica
+- Gemini
+- Ollama / Mistral
+- Qdrant
+
+### DevOps & Cloud
+
+- Docker
+- Git
+- GitHub
+- Azure
+- Azure DevOps
+
+## 🎓 Educación
+
+**Ingeniería Civil en Computación e Informática**  
+Universidad Católica del Norte
+
+**Titulado con Distinción**
+
+También cuento con formación complementaria en **liderazgo inteligente y coaching de equipos**.
+
+## 📺 Voluntariado
+
+Uno de los proyectos que considero especialmente relevante es mi participación en un proyecto de apoyo a estudiantes mediante **material educativo y contenido de programación en Python**.
+
+El proyecto contempla material didáctico y videos orientados a facilitar el aprendizaje de programación.
+
+## 🖥️ Tecnologías del portafolio
+
+Este sitio fue desarrollado utilizando:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Componentes inspirados en shadcn/ui
+- React Router
+- Lucide Icons
+
+El proyecto está diseñado como una aplicación **responsive**, con soporte para navegación multipágina mediante `HashRouter` y preparada para desplegarse en **GitHub Pages**.
+
+## 📁 Estructura
 
 ```text
-src/data/portfolio.ts
-```
+src/
+├── components/
+├── data/
+│   └── portfolio.ts
+├── pages/
+├── App.tsx
+└── main.tsx
 
-Desde ahí puedes cambiar:
+public/
+├── assets/
+└── docs/
 
-- Perfil y redes.
-- Experiencia.
-- Proyectos.
-- Tecnologías.
-- Servicios.
-- Enlaces de Lunara y Last Whisper.
-
-Los PDFs se encuentran en `public/docs/` y las imágenes en `public/assets/`.
+.github/
+└── workflows/
+    └── deploy.yml
