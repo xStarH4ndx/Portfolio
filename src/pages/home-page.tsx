@@ -44,9 +44,9 @@ export function HomePage() {
             <p className="mt-5 text-lg font-semibold text-slate-200 sm:text-xl">{profile.role}</p>
             <blockquote className="mt-6 border-l-2 border-blue-400 pl-4 text-base italic text-slate-200">“{profile.tagline}”</blockquote>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">{profile.summary}</p>
-
+            {/* Actualizar CV */}
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button size="lg" asChild><a href={`${base}docs/Bruno_Toro_CV_2026.pdf`} download><Download className="h-4 w-4" /> Descargar CV</a></Button>
+              <Button size="lg" asChild><a href={`${base}docs/Bruno_Toro_Elgueta_CV.pdf`} download><Download className="h-4 w-4" /> Descargar CV</a></Button>
               <Button size="lg" variant="outline" asChild><a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin className="h-4 w-4" /> LinkedIn</a></Button>
               <Button size="lg" variant="outline" asChild><a href={profile.github} target="_blank" rel="noreferrer"><Github className="h-4 w-4" /> GitHub</a></Button>
             </div>
