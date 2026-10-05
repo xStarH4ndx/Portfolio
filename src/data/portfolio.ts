@@ -1,206 +1,142 @@
-export type NavigationItem = {
-  id: string
-  label: string
-}
-
-export type Experience = {
-  company: string
-  role: string
-  location: string
-  period: string
-  summary: string
-  achievements: string[]
-  technologies: string[]
-}
-
-export type Project = {
-  name: string
-  category: string
-  period: string
-  description: string
-  impact: string
-  technologies: string[]
-  featured?: boolean
-  accent: 'cyan' | 'violet' | 'amber' | 'blue'
-}
-
 export const profile = {
-  name: 'Bruno Toro Elgueta',
-  shortName: 'Bruno Toro',
-  role: 'Ingeniero de Software',
-  headline: 'Desarrollo soluciones fullstack, APIs escalables e inteligencia artificial aplicada.',
-  description:
-    'Ingeniero Civil en Computación e Informática con experiencia construyendo productos de software de principio a fin: arquitectura backend, interfaces web, automatización, despliegue en la nube y soluciones con LLMs, embeddings y RAG.',
-  email: 'toro.elgueta.bt@gmail.com',
-  phone: '+56 9 3621 4680',
-  location: 'Coquimbo, Chile',
-  linkedin: 'https://www.linkedin.com/in/bruno-toro-elgueta/',
-  github: 'https://github.com/xStarH4ndx',
-  cvPath: '/CV_Bruno_Toro_Elgueta.pdf',
-}
+  name: "Bruno Nicolás Toro Elgueta",
+  role: "Ingeniero Civil en Computación e Informática",
+  tagline: "El conocimiento crea valor cuando mejora la vida de otros.",
+  summary:
+    "Experiencia en desarrollo fullstack, integración de modelos de lenguaje (LLMs) y arquitectura de APIs escalables.",
+  about:
+    "Perseverante, Respetuoso y Auténtico son las cualidades que más me definen. Convierto cada desafío en una oportunidad para aprender, crecer y aportar valor. Impulsado por la creencia de que las mejores ideas nacen del intercambio de experiencias, construyendo relaciones de confianza y trabajando en equipo.",
+  github: "https://github.com/xStarH4ndx",
+  linkedin: "https://www.linkedin.com/in/bruno-toro-elgueta/",
+  youtube: "https://www.youtube.com/@StarHand",
+  email: "toro.elgueta.bt@gmail.com",
+};
 
-export const navigation: NavigationItem[] = [
-  { id: 'inicio', label: 'Inicio' },
-  { id: 'perfil', label: 'Perfil' },
-  { id: 'experiencia', label: 'Experiencia' },
-  { id: 'proyectos', label: 'Proyectos' },
-  { id: 'habilidades', label: 'Habilidades' },
-  { id: 'formacion', label: 'Formación' },
-  { id: 'contacto', label: 'Contacto' },
-]
+export const softSkills = [
+  "Comunicación efectiva",
+  "Liderazgo",
+  "Trabajo en equipo",
+  "Resolución de problemas",
+  "Adaptabilidad",
+  "Aprendizaje continuo",
+];
 
-export const highlights = [
-  { value: '+97%', label: 'reducción del tiempo de búsqueda' },
-  { value: '+99%', label: 'reducción del análisis documental' },
-  { value: '+90%', label: 'cobertura de pruebas alcanzada' },
-  { value: 'Fullstack', label: 'producto, backend, frontend y nube' },
-]
-
-export const experiences: Experience[] = [
+export const experience = [
   {
-    company: 'Austranet SPA',
-    role: 'Ingeniero de Software',
-    location: 'Coquimbo, Chile',
-    period: 'Dic. 2025 — Jul. 2026',
-    summary:
-      'Participé en el diseño, desarrollo y despliegue de plataformas orientadas a automatizar procesos complejos mediante software e inteligencia artificial.',
-    achievements: [
-      'Desarrollé RadarOp, plataforma para evaluar y gestionar oportunidades de financiamiento para investigadores.',
-      'Implementé recomendación semántica, análisis documental con IA y un chatbot sustentado en arquitectura RAG.',
-      'Construí una plataforma para detectar brechas normativas con procesamiento asíncrono, búsqueda vectorial y modelos locales.',
-      'Integré servicios, bases de datos y despliegues utilizando Azure, Docker y flujos de trabajo colaborativos.',
-    ],
-    technologies: [
-      '.NET',
-      'C#',
-      'NestJS',
-      'TypeScript',
-      'PostgreSQL',
-      'Qdrant',
-      'Redis',
-      'BullMQ',
-      'Azure',
-      'Docker',
+    company: "Austranet SPA",
+    role: "Ingeniero de Software",
+    period: "Dic. 2025 - Jul. 2026",
+    place: "Coquimbo, Chile",
+    points: [
+      "Desarrollo de RadarOp para evaluación y gestión de oportunidades de financiamiento, utilizando .NET/C#, PostgreSQL, Microsoft Azure y Azure DevOps.",
+      "Implementación de recomendación semántica, análisis con IA y chatbot RAG, reduciendo en más del 97% el tiempo de búsqueda y más del 99% el análisis documental.",
+      "Desarrollo de una plataforma de detección automatizada de brechas normativas con NestJS, TypeScript, Qdrant, BullMQ, Redis y Ollama/Mistral, con más del 90% de cobertura de pruebas.",
     ],
   },
   {
-    company: 'Universidad Católica del Norte',
-    role: 'Ayudante de Programación',
-    location: 'Coquimbo, Chile',
-    period: 'Ago. 2024 — Dic. 2024',
-    summary:
-      'Acompañé a estudiantes en el aprendizaje de programación, fortaleciendo tanto sus fundamentos como su capacidad para resolver problemas de manera autónoma.',
-    achievements: [
-      'Realicé ayudantías grupales y sesiones de apoyo personalizadas.',
-      'Preparé material didáctico y videos explicativos sobre conceptos fundamentales.',
-      'Apoyé la depuración de código y el desarrollo de ejercicios prácticos en Python.',
+    company: "Universidad Católica del Norte",
+    role: "Ayudante de Programación",
+    period: "Ago. 2024 - Dic. 2024",
+    place: "Coquimbo, Chile",
+    points: [
+      "Acompañamiento a estudiantes mediante ayudantías grupales y sesiones personalizadas.",
+      "Elaboración de material didáctico y videos explicativos para reforzar fundamentos de programación en Python.",
+      "Orientación en resolución de problemas, depuración de código y ejercicios prácticos con retroalimentación continua.",
     ],
-    technologies: ['Python', 'Docencia', 'Resolución de problemas', 'Comunicación'],
   },
-]
+];
 
-export const projects: Project[] = [
+export const projects = [
   {
-    name: 'RadarOp',
-    category: 'IA aplicada · Plataforma fullstack',
-    period: '2026',
+    title: "API de Inteligencia Regulatoria",
+    subtitle: "Identificación automatizada de brechas normativas",
     description:
-      'Plataforma para centralizar convocatorias de financiamiento, recomendar oportunidades según el perfil de cada investigador y analizar automáticamente sus bases técnicas.',
-    impact:
-      'Redujo en más de 97% el tiempo de búsqueda y en más de 99% el tiempo requerido para analizar documentación.',
-    technologies: ['.NET', 'C#', 'React', 'PostgreSQL', 'Azure', 'Qdrant', 'Gemini', 'RAG'],
-    featured: true,
-    accent: 'cyan',
+      "API orientada a OIV que integra procesamiento asíncrono, búsqueda por similitud semántica y modelos locales para identificar riesgos y generar controles a partir de procesos operativos.",
+    image: "assets/proyecto-regulatoria.jpg",
+    pdf: "docs/API_Inteligencia_Regulatoria.pdf",
+    technologies: ["NestJS", "TypeScript", "PostgreSQL", "Qdrant", "Redis", "BullMQ", "Ollama"],
+    highlights: ["Procesamiento asíncrono", "Similitud coseno", "90% de cobertura de pruebas"],
   },
   {
-    name: 'Inteligencia Regulatoria OIV',
-    category: 'Backend · Automatización con IA',
-    period: '2025–2026',
+    title: "Sistema de Gestión de Gastos",
+    subtitle: "Gastos compartidos, inventario y microservicios",
     description:
-      'Sistema para detectar brechas normativas, comparar riesgos de forma semántica y generar controles mediante modelos de lenguaje locales.',
-    impact:
-      'Procesamiento asíncrono de grandes volúmenes de información y más de 90% de cobertura en pruebas.',
-    technologies: ['NestJS', 'TypeScript', 'TypeORM', 'Qdrant', 'BullMQ', 'Redis', 'Ollama', 'Mistral'],
-    featured: true,
-    accent: 'violet',
+      "Aplicación web para organizar gastos y productos compartidos por hogar, distribuir pagos entre integrantes, registrar servicios y mantener inventario con una arquitectura distribuida.",
+    image: "assets/proyecto-gastos.jpg",
+    pdf: "docs/Sistema_Gestion_Gastos.pdf",
+    technologies: ["React", "NestJS", "Spring Boot", "MongoDB", "RabbitMQ", "gRPC", "GraphQL"],
+    highlights: ["Casas y miembros", "Cuotas automáticas", "Arquitectura de microservicios"],
   },
   {
-    name: 'Gestión de Finanzas del Hogar',
-    category: 'Producto digital · Finanzas',
-    period: 'May. — Jun. 2025',
+    title: "Inventario para Laboratorios",
+    subtitle: "Solicitudes, aprobación y trazabilidad de insumos",
     description:
-      'Aplicación colaborativa para administrar compras, gastos compartidos y presupuestos familiares desde una experiencia centralizada.',
-    impact:
-      'Validada con usuarios de la comunidad universitaria, quienes destacaron su utilidad para organizar las finanzas domésticas.',
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'UX'],
-    accent: 'amber',
+      "Sistema para estandarizar solicitudes de insumos de laboratorio, permitir seguimiento por profesores y administración, y mantener un historial claro de aprobaciones y disponibilidad.",
+    image: "assets/proyecto-laboratorios.jpg",
+    pdf: "docs/Sistema_Inventario_Laboratorios.pdf",
+    technologies: ["React", "TypeScript", "Java", "Spring Boot", "GraphQL", "PostgreSQL", "Docker"],
+    highlights: ["Roles profesor/admin", "Historial de aprobaciones", "Backend dockerizado"],
   },
   {
-    name: 'Inventario para Laboratorios',
-    category: 'Digitalización · Gestión de recursos',
-    period: 'Mar. — Abr. 2025',
+    title: "Inventario Papasnata",
+    subtitle: "Gestión de inventario y automatización con Power Platform",
     description:
-      'Solución para estandarizar y digitalizar la administración de insumos de laboratorio en Santo Tomás.',
-    impact:
-      'Despertó interés institucional y fue considerado para presentación ante la casa central en Santiago.',
-    technologies: ['Java', 'Spring Boot', 'SQL', 'Análisis de requisitos'],
-    accent: 'blue',
+      "Solución para gestionar inventario entre sucursales, movimientos, aprobaciones, alertas, trazabilidad y análisis, apoyada en el ecosistema Microsoft Power Platform.",
+    image: "assets/proyecto-papasnata.jpg",
+    pdf: "docs/Inventario_Papasnata_Power_Platform.pdf",
+    technologies: ["Power Apps", "SharePoint", "Power Automate", "Power BI"],
+    highlights: ["Automatización de procesos", "Seguridad e integridad", "Escalabilidad"],
   },
-  {
-    name: 'Sistema de Gestión Educativa',
-    category: 'Transformación digital · Educación',
-    period: 'Ago. — Dic. 2024',
-    description:
-      'Plataforma para disminuir procesos manuales y mejorar la gestión de actividades, evaluaciones, comunicaciones y reuniones escolares.',
-    impact:
-      'Centralizó tareas clave de la comunidad educativa dentro de una experiencia digital coherente.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Diseño de producto'],
-    accent: 'violet',
-  },
-]
+];
 
-export const skillGroups = [
-  {
-    title: 'Lenguajes',
-    skills: ['TypeScript', 'JavaScript', 'C#', 'Python', 'Java', 'C++', 'SQL'],
-  },
-  {
-    title: 'Frontend',
-    skills: ['React', 'Vite', 'Material UI', 'HTML', 'CSS', 'Diseño responsive'],
-  },
-  {
-    title: 'Backend y APIs',
-    skills: ['.NET', 'NestJS', 'Spring Boot', 'Node.js', 'REST', 'GraphQL', 'gRPC'],
-  },
-  {
-    title: 'Datos e infraestructura',
-    skills: ['PostgreSQL', 'MongoDB', 'TypeORM', 'Redis', 'Docker', 'Azure', 'Google Cloud'],
-  },
-  {
-    title: 'Inteligencia artificial',
-    skills: ['LLMs', 'RAG', 'Embeddings', 'Qdrant', 'Gemini', 'Ollama / Mistral'],
-  },
-  {
-    title: 'Herramientas',
-    skills: ['Git / GitHub', 'Azure DevOps', 'Swagger', 'Postman', 'Pruebas unitarias'],
-  },
-]
+export const techGroups = [
+  { title: "Lenguajes", items: ["Python", "Java", "C#", "TypeScript", "JavaScript", "C++", "SQL"] },
+  { title: "Frontend", items: ["React", "Vite", "Tailwind CSS", "shadcn/ui"] },
+  { title: "Backend y APIs", items: [".NET / ASP.NET Core", "NestJS", "Spring Boot", "Node.js", "REST", "GraphQL", "gRPC"] },
+  { title: "Datos", items: ["PostgreSQL", "MongoDB", "TypeORM", "Dapper", "Redis"] },
+  { title: "IA", items: ["LLMs", "RAG", "Embeddings", "Qdrant", "Ollama", "Gemini"] },
+  { title: "Herramientas", items: ["Docker", "Git / GitHub", "Azure", "Google Cloud", "Swagger", "Postman", "BullMQ"] },
+];
 
-export const education = {
-  institution: 'Universidad Católica del Norte — Campus Guayacán',
-  degree: 'Ingeniería Civil en Computación e Informática',
-  status: 'Egresado',
-  period: '2020 — Jul. 2026',
-  location: 'Coquimbo, Chile',
-}
-
-export const certifications = [
+export const services = [
   {
-    title: 'Metodología en Liderazgo Inteligente y Coaching de Equipos',
-    issuer: 'Formación de 75 horas académicas',
-    period: 'Ago. — Dic. 2025',
-    distinction: 'Máxima Distinción Especial',
+    title: "Desarrollo de aplicaciones",
     description:
-      'Liderazgo de equipos, comunicación efectiva, gestión de personas, resolución de conflictos y coaching aplicado a entornos organizacionales.',
+      "Aplicaciones web modernas, paneles administrativos, automatizaciones e integraciones con APIs, bases de datos e inteligencia artificial.",
+    bullets: ["Aplicaciones web", "Dashboards y sistemas internos", "Integraciones con IA y APIs", "Automatizaciones"],
+    icon: "app",
   },
-]
+  {
+    title: "Portafolios personalizados",
+    description:
+      "Sitios web diseñados a medida para profesionales, emprendimientos, artistas y marcas que necesitan una presencia digital clara y moderna.",
+    bullets: ["Diseño responsive", "Identidad visual", "Optimización para GitHub Pages", "Contenido fácil de mantener"],
+    icon: "portfolio",
+  },
+  {
+    title: "Clases particulares de programación",
+    description:
+      "Clases personalizadas para aprender programación desde cero, reforzar contenidos universitarios o desarrollar proyectos propios.",
+    bullets: ["Python", "Java / TypeScript", "Programación web", "Lógica y resolución de problemas"],
+    icon: "classes",
+  },
+];
+
+export const serviceExamples = [
+  {
+    title: "Lunara Matrona",
+    description:
+      "Portafolio web orientado a una profesional de salud, con una interfaz cercana, responsive y contenido organizado para presentar servicios.",
+    accent: "violet",
+    repository: "https://github.com/xStarH4ndx/portfolio_sami",
+    live: "https://lunara-matrona.github.io",
+  },
+  {
+    title: "Last Whisper Official",
+    description:
+      "Sitio web para una banda, enfocado en identidad visual, música, contenido multimedia, conciertos y presencia digital.",
+    accent: "blue",
+    repository: "https://github.com/LastWhisper-Official/LastWhisper-Official.github.io",
+    live: "https://lastwhisper-official.github.io/",
+  },
+];

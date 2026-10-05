@@ -1,68 +1,67 @@
-# Portafolio profesional — Bruno Toro Elgueta
+# Portafolio profesional — Bruno Toro
 
-Portafolio de una sola página construido con React, TypeScript y Vite. En la solicitud se interpretó “VUE” como “Vite”, ya que React y Vue son frameworks alternativos. El diseño toma como referencia el portafolio entregado: navegación lateral, fondo oscuro, acento turquesa, avatar ilustrado y animación de estrellas, pero incorpora una arquitectura y contenido profesional completos.
+Portafolio personal construido con **React + TypeScript + Vite + Tailwind CSS + componentes estilo shadcn/ui**.
 
-## Ejecutar el proyecto
+## Estructura actual
+
+- **Inicio (`#/`)**
+  - Hero con CV, LinkedIn y GitHub.
+  - Foto integrada al fondo mediante degradados y máscara de borde.
+  - Sobre mí y habilidades blandas.
+  - Voluntariado / Proyecto Python UCN.
+  - Última experiencia laboral.
+  - Un proyecto destacado.
+  - Tecnologías.
+  - Educación y certificación de liderazgo.
+- **Servicios (`#/servicios`)**
+  - Desarrollo de aplicaciones.
+  - Portafolios personalizados.
+  - Clases particulares de programación.
+  - Ejemplos: Lunara Matrona y Last Whisper Official.
+- **Experiencia & Proyectos (`#/experiencia-proyectos`)**
+  - Toda la experiencia laboral.
+  - Todos los proyectos destacados con visualización de PDF.
+
+## Ejecutar localmente
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Crear una versión de producción
+## Build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Editar el contenido
+## Deploy en GitHub Pages
 
-La información profesional está centralizada en:
+El repositorio incluye `.github/workflows/deploy.yml` y utiliza **Node 24**.
+
+1. Sube el proyecto a la rama `main`.
+2. En GitHub entra a **Settings → Pages**.
+3. En **Source**, selecciona **GitHub Actions**.
+4. Cada `push` a `main` construirá y publicará el sitio automáticamente.
+
+El proyecto usa `HashRouter` y `base: "./"`, por lo que funciona en GitHub Pages incluso si el repositorio tiene un nombre distinto al dominio.
+
+## Contenido editable
+
+La mayor parte del contenido está centralizado en:
 
 ```text
 src/data/portfolio.ts
 ```
 
-Desde ese archivo se pueden modificar datos personales, experiencia, proyectos, habilidades, formación, certificaciones, enlaces y métricas sin tocar los componentes.
+Desde ahí puedes cambiar:
 
-## Estructura principal
+- Perfil y redes.
+- Experiencia.
+- Proyectos.
+- Tecnologías.
+- Servicios.
+- Enlaces de Lunara y Last Whisper.
 
-```text
-src/
-├── assets/
-├── components/
-│   ├── MobileNavigation.tsx
-│   ├── ProjectCard.tsx
-│   ├── SectionHeading.tsx
-│   └── Sidebar.tsx
-├── data/
-│   └── portfolio.ts
-├── hooks/
-│   └── useActiveSection.ts
-├── App.tsx
-├── main.tsx
-└── styles.css
-```
-
-## Personalización visual
-
-Los colores, anchos y variables principales están al comienzo de `src/styles.css` dentro de `:root`.
-
-## CV
-
-El archivo descargable está ubicado en:
-
-```text
-public/CV_Bruno_Toro_Elgueta.pdf
-```
-
-## Contenido incluido
-
-- Presentación profesional y llamada a la acción.
-- Experiencia laboral con logros y tecnologías.
-- Cinco proyectos destacados.
-- Habilidades agrupadas por especialidad.
-- Educación, certificación y datos de contacto.
-- Navegación responsive para escritorio y móvil.
-- Descarga directa del CV.
+Los PDFs se encuentran en `public/docs/` y las imágenes en `public/assets/`.
